@@ -709,6 +709,26 @@ tbody tr {
     top: 25px;
 }
 
+.filter.active {
+    color: #012C3D;
+}
+
+.sort_wrapper input {
+    visibility: hidden;
+}
+
+.sort_wrapper .form-check-input ~ label {
+    cursor: pointer;
+}
+
+.sort_wrapper .form-check-input:checked ~ label {
+    color: #012C3D;
+}
+
+#history_filter {
+    visibility: hidden;
+}
+
 @media (max-width: 768px) {
 
     .body-overflow {

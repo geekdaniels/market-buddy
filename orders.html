@@ -226,16 +226,36 @@
 
                                         <div class="row">
                                             <div class="col">
+                                                <div class="sort_wrapper">
 
-                                                <p>
-                                                    <span id="filter" data-value="New">New</span>
-                                                    <span class="filter" data-value="Accepted">Accepted</span>
-                                                    <span class="filter" data-value="Canceled">Canceled</span>
-                                                    <span class="filter" data-value="Deleted">Deleted</span>
-                                                </p>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="filter" id="all" value="" checked>
+                                                        <label class="form-check-label" for="all">All</label>
+                                                    </div>
 
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="filter" id="new" value="New">
+                                                        <label class="form-check-label" for="new">New</label>
+                                                    </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="filter" id="accepted" value="Accepted">
+                                                        <label class="form-check-label" for="accepted">Accepted</label>
+                                                    </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="filter" id="canceled" value="Canceled">
+                                                        <label class="form-check-label" for="canceled">Canceled</label>
+                                                    </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="filter" id="deleted" value="Deleted">
+                                                        <label class="form-check-label" for="deleted">Deleted</label>
+                                                    </div>
+
+                                                </div>
                                                 <table id="history" class="table nowrap" style="width:100%">
-                                                    <thead class="d-">
+                                                    <thead class="d-none">
                                                         <tr>
                                                             <th>Title</th>
                                                             <th>Clicks</th>
@@ -412,16 +432,19 @@
                 responsive: true,
                 "paging": false,
                 "info": false,
-                "searching": false
+                //                "searching": false
             });
 
             $('.filter').click(function() {
                 var value = $(this).data('value')
-                var column = 4;
-                //                console.log($(this).data('value'))
-                history_table.columns(column).search("Deleted").draw();
-                console.log(history_table.columns(column))
+
             });
+
+            $('input[name=filter]').change(function() {
+                var value = $('input[name=filter]:checked').val();
+                history_table.columns(4).search(value).draw();
+            });
+
         })
 
     </script>
