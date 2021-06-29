@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>MarketBuddy | Profile</title>
+    <title>MarketBuddy | Goods</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -89,7 +89,7 @@
             <ul class="list-unstyled components" id="sidemenu">
                 <p class="mb-3">Main Menu</p>
 
-                <li class="my-2">
+                <li class="my-2 active">
                     <a href="dashboard.html">
                         <span class="mr-1">
                             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,8 +110,8 @@
                             </svg>
                         </span> Offers</a>
 
-                    <ul class="collapse list-unstyled" id="offers" data-parent="#sidemenu">
-                        <li class="">
+                    <ul class="show list-unstyled" id="offers" data-parent="#sidemenu">
+                        <li class="active">
                             <a href="goods.html">Goods</a>
                         </li>
                         <li>
@@ -123,7 +123,7 @@
                     </ul>
                 </li>
 
-                <li class="my-2 active">
+                <li class="my-2">
                     <a href="profile.html">
                         <span class="mr-1">
                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -206,100 +206,250 @@
 
                 <div class="row">
                     <div class="col-lg-8">
-                        <p class="breadcrumb"><a href="dashboard.html" class="mr-2">Dashboard</a> >> <span class="active ml-2"> <a href="">Profile</a></span></p>
+                        <p class="breadcrumb"><a href="dashboard.html" class="mr-2">Dashboard</a> >> <span class="active ml-2"> <a href="goods.html">Goods</a></span></p>
 
 
                         <div class="dashboard-card">
-                            <div class="card-title">
-                                <h5 class="mb-0">Profile</h5>
+                            <div class="row align-items-center">
+                                <div class="col-6 col-lg-4">
+                                    <div class="card-title">
+                                        <h5 class="mb-0">Goods</h5>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-4 offset-lg-4 text-right">
+                                    <div class="card-title">
+                                        <p class="mb-0"> <a class="offers-title-link" href="add-product.html">+ Add new</a></p>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="card-body">
-                                <form action="" class="p-lg-5">
 
-                                    <div class="form-row justify-content-center">
-                                        <div class="form-group col-lg-3">
-                                            <div class="">
-                                                <img src="images/profile-image-placeholder.svg" class="img-fluid rounded-circle" id="profile_placeholder" width="250" />
+                                <div class="offers mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-4 my-2">
+                                            <div class="image-card">
+                                                <img src="https://source.unsplash.com/random" class="img-fluid" alt="" height="137" width="234">
+
+                                                <p class="title mb-0 mt-2">Wordpress Web design</p>
+
+                                                <p class="cost mb-1">N640,000</p>
+
+                                                <p class="author">by Samuel Jackson</p>
                                             </div>
-                                            <div class="upload-btn-wrapper cursor">
-                                                <div class="btn mt-3 px-4 cursor"><img class="icon" src="images/profile_update_icon.svg" class="cursor" alt=""></div>
-                                                <input id="profile_image" accept="image/jpeg" type="file" class="cursor" />
+                                        </div>
+
+                                        <div class="col-lg-4 my-2">
+                                            <div class="image-card">
+                                                <img src="https://source.unsplash.com/random" alt="" class="img-fluid" height="137" width="234">
+
+                                                <p class="title mb-0 mt-2">Wordpress Web design</p>
+
+                                                <p class="cost mb-1">N640,000</p>
+
+                                                <p class="author">by Samuel Jackson</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-lg-4 my-2">
+                                            <div class="image-card">
+                                                <img src="https://source.unsplash.com/random" alt="" class="img-fluid" height="137" width="234">
+
+                                                <p class="title mb-0 mt-2">Wordpress Web design</p>
+
+                                                <p class="cost mb-1">N640,000</p>
+
+                                                <p class="author">by Samuel Jackson</p>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="form-row">
-                                        <div class="form-group col-lg-12">
-                                            <div class="form-element-wrapper">
-                                                <label for="business_name">Business Name</label>
-                                                <input type="text" class="form-control form-title" name="business_name" id="business_name" autofocus>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <div class="ongoing-services">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="mt-3 ongoing-services-title">Ongoing sales</p>
+                                                <hr>
 
-                                    <div class="form-row">
-                                        <div class="form-group col-lg-12">
-                                            <div class="form-element-wrapper">
-                                                <label for="business_email">Business Email</label>
-                                                <input type="text" class="form-control form-title" name="business_email" id="business_email" autocomplete="email">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="form-group col-lg-12">
-                                            <div class="form-element-wrapper">
-                                                <label for="contact_number">Contact Number</label>
-                                                <input type="text" class="form-control form-title" name="contact_number" id="contact_number" autocomplete="mobile">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="form-group col-lg-12">
-                                            <div class="form-element-wrapper">
-                                                <label for="address">Address</label>
-                                                <input type="text" class="form-control form-title" name="address" id="address" autocomplete="address-line1">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="form-group col-lg-6">
-                                            <div class="form-element-wrapper">
-                                                <label for="city">City</label>
-                                                <input type="text" class="form-control form-title" name="city" id="city" autocomplete="">
                                             </div>
                                         </div>
 
-                                        <div class="form-group col-lg-6">
-                                            <div class="form-element-wrapper">
-                                                <label for="state">State</label>
-                                                <input type="text" class="form-control form-title" name="state" id="state">
-                                            </div>
-                                        </div>
-                                    </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <table id="services" class="table nowrap" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Title</th>
+                                                            <th>Client Name</th>
+                                                            <th>Price</th>
+                                                            <th>Status</th>
+                                                        </tr>
+                                                    </thead>
 
-                                    <div class="form-row">
-                                        <div class="form-group col-lg-12">
-                                            <div class="form-element-wrapper position-relative">
-                                                <label for="business_license">Upload Business License or Permit</label>
-                                                <input type="text" class="form-control form-title" name="business_license_name" id="business_license_name">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="title"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Design the best UI design for your mobile app</td>
+                                                            <td>System Architect</td>
+                                                            <td>Edinburgh</td>
+                                                            <td><span class="pending">Pending</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="title"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Garrett Winters</td>
+                                                            <td>Accountant</td>
+                                                            <td>Tokyo</td>
+                                                            <td><span class="ongoing">Ongoing</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="title"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Design the best UI design for your mobile app</td>
+                                                            <td>System Architect</td>
+                                                            <td>Edinburgh</td>
+                                                            <td><span class="pending">Pending</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
 
-                                                <div class="upload-file-wrapper">
-                                                    <button type="button" class="btn primary__button height--60 btn-block"><img src="images/fi_upload.svg" alt="upload documents"></button>
-                                                    <input type="file" accept="application/pdf" name="business_license" id="business_license">
+                                                <div class="text-center py-5">
+                                                    <img src="images/no-service.svg" alt="no services" class="img-fluid">
+
+                                                    <p class="mt-3">You have no ongoing service</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-primary btn-block">
-                                        Save
-                                    </button>
-                                </form>
+                                    <div class="history">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="mt-3 mb-0 row-title">History</p>
+                                            </div>
 
+                                            <div class="col text-right">
+                                                <p class="mt-3 mb-0 row-title"><a href="#" class="secondary-link">View all</a></p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col">
+                                                <table id="history" class="table nowrap" style="width:100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Title</th>
+                                                            <th>Clicks</th>
+                                                            <th>Orders</th>
+                                                            <th>Total earnings</th>
+                                                            <th>More</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="title"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Design the best UI design for your mobile app</td>
+                                                            <td>200</td>
+                                                            <td>66</td>
+                                                            <td>1,224,000</td>
+                                                            <td class="text-center dropleft">
+                                                                <a id="dropdownMenuButton" class="cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span><img src="images/fi_more-horizontal.svg" alt="more" class="img-fluid"></span> </a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item font-12" href="#">Approve</a>
+                                                                    <a class="dropdown-item font-12" href="#">Edit</a>
+                                                                    <a class="dropdown-item font-12" href="#">Review</a>
+                                                                    <a class="dropdown-item font-12" href="#">Reject </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="title"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Garrett Winters</td>
+                                                            <td>70</td>
+                                                            <td>8</td>
+                                                            <td>1,564,000</td>
+
+                                                            <td class="text-center dropleft">
+                                                                <a id="dropdownMenuButton" class="cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span><img src="images/fi_more-horizontal.svg" alt="more" class="img-fluid"></span> </a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item font-12" href="#">Approve</a>
+                                                                    <a class="dropdown-item font-12" href="#">Edit</a>
+                                                                    <a class="dropdown-item font-12" href="#">Review</a>
+                                                                    <a class="dropdown-item font-12" href="#">Reject </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="title"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Design the best UI design for your mobile app</td>
+                                                            <td>200</td>
+                                                            <td>66</td>
+                                                            <td>1,224,000</td>
+                                                            <td class="text-center dropleft">
+                                                                <a id="dropdownMenuButton" class="cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span><img src="images/fi_more-horizontal.svg" alt="more" class="img-fluid"></span> </a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item font-12" href="#">Approve</a>
+                                                                    <a class="dropdown-item font-12" href="#">Edit</a>
+                                                                    <a class="dropdown-item font-12" href="#">Review</a>
+                                                                    <a class="dropdown-item font-12" href="#">Reject </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="title"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Design the best UI design for your mobile app</td>
+                                                            <td>200</td>
+                                                            <td>66</td>
+                                                            <td>1,224,000</td>
+                                                            <td class="text-center dropleft">
+                                                                <a id="dropdownMenuButton" class="cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span><img src="images/fi_more-horizontal.svg" alt="more" class="img-fluid"></span> </a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item font-12" href="#">Approve</a>
+                                                                    <a class="dropdown-item font-12" href="#">Edit</a>
+                                                                    <a class="dropdown-item font-12" href="#">Review</a>
+                                                                    <a class="dropdown-item font-12" href="#">Reject </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="title"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Design the best UI design for your mobile app</td>
+                                                            <td>200</td>
+                                                            <td>66</td>
+                                                            <td>1,224,000</td>
+                                                            <td class="text-center dropleft">
+                                                                <a id="dropdownMenuButton" class="cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span><img src="images/fi_more-horizontal.svg" alt="more" class="img-fluid"></span> </a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item font-12" href="#">Approve</a>
+                                                                    <a class="dropdown-item font-12" href="#">Edit</a>
+                                                                    <a class="dropdown-item font-12" href="#">Review</a>
+                                                                    <a class="dropdown-item font-12" href="#">Reject </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="title"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Design the best UI design for your mobile app</td>
+                                                            <td>200</td>
+                                                            <td>66</td>
+                                                            <td>1,224,000</td>
+                                                            <td class="text-center dropleft">
+                                                                <a id="dropdownMenuButton" class="cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span><img src="images/fi_more-horizontal.svg" alt="more" class="img-fluid"></span> </a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item font-12" href="#">Approve</a>
+                                                                    <a class="dropdown-item font-12" href="#">Edit</a>
+                                                                    <a class="dropdown-item font-12" href="#">Review</a>
+                                                                    <a class="dropdown-item font-12" href="#">Reject </a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+
+                                                <div class="text-center py-5">
+                                                    <img src="images/no-service.svg" alt="no services" class="img-fluid">
+                                                    <p class="mt-3">You have no history yet</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
 
@@ -375,7 +525,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <script src="js/util.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            var table = $('#services').DataTable({
+                responsive: true,
+                "paging": false,
+                "info": false,
+                "searching": false
+            });
+
+            new $.fn.dataTable.FixedHeader(table);
+
+
+            var history_table = $('#history').DataTable({
+                responsive: true,
+                "paging": false,
+                "info": false,
+                "searching": false
+            });
+        });
+
+    </script>
 
 </body>
 

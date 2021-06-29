@@ -26,8 +26,9 @@ $(document).ready(function () {
 
 })
 
-
-document.getElementById('copy').addEventListener('click', copyFunction);
+if (document.getElementById('copy')) {
+    document.getElementById('copy').addEventListener('click', copyFunction);
+}
 
 function copyFunction() {
     /* Get the text field */
@@ -42,3 +43,26 @@ function copyFunction() {
     /* Alert the copied text */
     //  alert("Link copied: " + linkInput.value);
 }
+
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#profile_placeholder').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#profile_image").change(function () {
+    readURL(this);
+});
+
+
+$('#business_license').change(function (e) {
+    var fileName = e.target.files[0].name;
+    $('#business_license_name').val(fileName);
+});

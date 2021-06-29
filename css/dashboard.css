@@ -31,6 +31,12 @@ a:focus {
     transition: all 0.3s;
 }
 
+
+.secondary-link {
+    font-size: 14px;
+    color: #02506E;
+}
+
 .text-red {
     color: var(--primary-color) !important;
 }
@@ -218,7 +224,7 @@ a:focus {
 
 #sidebar ul li a svg {
     position: relative;
-    top: 2px;
+    top: -3px;
 }
 
 
@@ -274,6 +280,10 @@ ul ul a {
     position: absolute;
     top: 95px;
     right: 0;
+}
+
+.cursor {
+    cursor: pointer;
 }
 
 .dashboard-card {
@@ -549,6 +559,154 @@ ul ul a {
 #linkInput {
     font-size: 13px;
     text-align: center;
+}
+
+
+.dash-intro {
+    background-color: #012C3D;
+    background-image: url(../images/dash-bg.svg);
+    background-size: cover;
+    background-position: right center;
+    border-radius: 5px;
+}
+
+.earth-img {
+    position: absolute;
+    top: -35%;
+    right: 80px;
+}
+
+.image-card img {
+    border-radius: 4px;
+    object-fit: cover;
+    width: 234px;
+    height: 137px;
+}
+
+.image-card .author {
+    color: #666666;
+    font-size: 12px;
+}
+
+.image-card .cost {
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+}
+
+.image-card .title {
+    font-size: 16px;
+    color: #000;
+}
+
+.offers-title-link {
+    font-weight: 900;
+    font-size: 14px;
+    color: #02506E;
+}
+
+.ongoing-services .ongoing-services-title,
+.history .row-title {
+    color: #666666;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px !important;
+    color: #666666 !important;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 0px solid #dee2e6 !important;
+}
+
+.table th {
+    border-top: 0px solid #dee2e6 !important;
+    font-weight: 400;
+}
+
+.table td {
+    padding: .75rem;
+    vertical-align: top;
+    border: 0px solid #dee2e6 !important;
+    font-weight: 300;
+    vertical-align: middle !important;
+}
+
+tbody tr {
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 2px #f7f8f3;
+    border-spacing: 0 8px;
+}
+
+.table td.title {
+    color: #000
+}
+
+
+.table td img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.table td span.pending {
+    background-color: #F7F8F3;
+    color: #666666;
+    padding: 5px 14px;
+    border-radius: 15px;
+}
+
+
+.table td span.ongoing {
+    background-color: #D7F3FE;
+    color: #0377A6;
+    padding: 5px 14px;
+    border-radius: 15px;
+}
+
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    top: -65px;
+    right: -100px;
+    cursor: pointer;
+}
+
+.edit_profile {
+    background: #F8444F;
+    Width: 35px;
+    Height: 35px;
+}
+
+.upload-file-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-file-wrapper {
+    position: absolute;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+    right: 10px;
+    top: 25px;
 }
 
 @media (max-width: 768px) {
