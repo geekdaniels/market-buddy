@@ -480,6 +480,7 @@
         </div>
     </div>
 
+
     <div class="overlay"></div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -592,18 +593,49 @@ We want to preview images, so we need to register the Image Preview plugin
                         //                        pondFiles = pond.getFiles();
                         //
                         // for (var i = 0; i < pondFiles.length; i++) { // append the blob file formdata.append('file[]', pondFiles[i].file); // }
+                        //                        $.ajax({
+                        // url: "https://jsonplaceholder.typicode.com/posts",
+                        // data: $(form).serialize(),
+                        // dataType: 'JSON',
+                        // processData: false,
+                        // contentType: false,
+                        // method: "post"
+                        // }).done(function(response) {
+                        // // todo
+                        // $('#stage3').hide();
+                        // $('#success').show();
+                        // });
+
+                        //                        console.log($(form));
+
+                        var formdata = new FormData($(form)[0]);
+
+
+                        //             append FilePond files into the form data
+                        pondFiles = pond.getFiles();
+
+                        console.log("formdata")
+
+
+                        for (var i = 0; i < pondFiles.length; i++) {
+                            // append the blob file
+                            formdata.append('file[]', pondFiles[i].file);
+                        }
+
                         $.ajax({
                             url: "https://jsonplaceholder.typicode.com/posts",
-                            data: $(form).serialize(),
+                            data: formdata,
                             dataType: 'JSON',
                             processData: false,
                             contentType: false,
                             method: "post"
                         }).done(function(response) {
-                            // todo 
-                            $('#stage3').hide();
-                            $('#success').show();
+                            // todo
+                            console.log(response)
                         });
+
+                        //                        submitForm();
+                        return false;
                     }
 
                 });
@@ -667,32 +699,33 @@ We want to preview images, so we need to register the Image Preview plugin
                 append_counter -= 1
             });
 
-            //            $("#serviceform").submit(function(e) {
-            //                
-            //                
-            //                e.preventDefault();
-            //                var formdata = new FormData(this);
-            //                //             append FilePond files into the form data
-            //                pondFiles = pond.getFiles();
-            //                for (var i = 0; i < pondFiles.length; i++) {
-            //                    append the blob file
-            //                    formdata.append('file[]', pondFiles[i].file);
-            //                }
-            //
-            //
-            //                $.ajax({
-            //                    url: "https://jsonplaceholder.typicode.com/posts",
-            //                    data: formdata,
-            //                    dataType: 'JSON',
-            //                    processData: false,
-            //                    contentType: false,
-            //                    method: "post"
-            //                }).done(function(response) {
-            //                    // todo
-            //                });
-            //
-            //            })
+
         });
+
+        //        function submitForm() {
+        //            var formdata = new FormData($("#serviceform")[0]);
+        //
+        //            console.log("formdata")
+        //            //             append FilePond files into the form data
+        //            pondFiles = pond.getFiles();
+        //            //
+        //            for (var i = 0; i < pondFiles.length; i++) {
+        //                // append the blob file
+        //                formdata.append('file[]', pondFiles[i].file);
+        //            }
+        //
+        //            $.ajax({
+        //                url: "https://jsonplaceholder.typicode.com/posts",
+        //                data: formdata,
+        //                dataType: 'JSON',
+        //                processData: false,
+        //                contentType: false,
+        //                method: "post"
+        //            }).done(function(response) {
+        //                // todo
+        //                console.log(response)
+        //            });
+        //        }
 
     </script>
 
