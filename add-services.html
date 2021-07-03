@@ -242,8 +242,6 @@
                                                     </clipPath>
                                                 </defs>
                                             </svg>
-
-                                            <!--                                            <span>2</span>-->
                                         </div>
 
 
@@ -255,7 +253,6 @@
                                         </svg>
 
                                         <div class="form-progress-circle rounded-circle mx-4 d-none d-lg-block" id="progress3">
-                                            <!--                                            <span>3</span>-->
                                             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0)">
                                                     <path d="M10.4473 1.14111V19.4744" stroke="#02506E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -269,6 +266,8 @@
                                             </svg>
 
                                         </div>
+
+                                        <span class="mr-2">Pricing</span>
 
                                     </div>
 
@@ -379,7 +378,7 @@
                                                 <button type="button" class="btn btn-secondary my-3 previous">Back</button>
                                             </div>
                                             <div class="form-group col-lg-4 col-6 offset-lg-4 text-right">
-                                                <button type="submit" class="btn btn-primary my-3">Proceed</button>
+                                                <button type="submit" class="btn btn-primary my-3 position-relative" id="submit"><span class="spinner"></span> Proceed</button>
                                             </div>
                                         </div>
                                     </div>
@@ -529,11 +528,6 @@ We want to preview images, so we need to register the Image Preview plugin
                 FilePondPluginImagePreview
             );
 
-            //            this reduces the size of each image
-            //            FilePond.setOptions({
-            // itemInsertLocation: "after",
-            // imagePreviewHeight: '50px'
-            // })
 
             pond = FilePond.create(
                 document.querySelector('#file'), {
@@ -544,8 +538,6 @@ We want to preview images, so we need to register the Image Preview plugin
 
 
             $(".next").click(function() {
-                //                document.body.scrollTop = 20;
-                //                document.documentElement.scrollTop = 20;
 
                 var form = $("#serviceform");
                 form.validate({
@@ -588,42 +580,24 @@ We want to preview images, so we need to register the Image Preview plugin
 
                     },
                     submitHandler: function(form) {
-                        //                        var formdata = new FormData($(form));
-                        // append FilePond files into the form data
-                        //                        pondFiles = pond.getFiles();
-                        //
-                        // for (var i = 0; i < pondFiles.length; i++) { // append the blob file formdata.append('file[]', pondFiles[i].file); // }
-                        //                        $.ajax({
-                        // url: "https://jsonplaceholder.typicode.com/posts",
-                        // data: $(form).serialize(),
-                        // dataType: 'JSON',
-                        // processData: false,
-                        // contentType: false,
-                        // method: "post"
-                        // }).done(function(response) {
-                        // // todo
-                        // $('#stage3').hide();
-                        // $('#success').show();
-                        // });
-
-                        //                        console.log($(form));
 
                         var formdata = new FormData($(form)[0]);
 
 
-                        //             append FilePond files into the form data
+                        // append FilePond files into the form data
                         pondFiles = pond.getFiles();
 
-                        console.log("formdata")
 
+                        // This is not nnecessary unless you need  to get files individually
 
-                        for (var i = 0; i < pondFiles.length; i++) {
-                            // append the blob file
-                            formdata.append('file[]', pondFiles[i].file);
-                        }
+                        // for (var i = 0; i < pondFiles.length; i++) { // // append the blob file // formdata.append('file[]', pondFiles[i].file); // }
+
+                        //                        disable button
+                        $("#submit").prop('disabled', true);
+                        $("#submit").addClass('spin');
 
                         $.ajax({
-                            url: "https://jsonplaceholder.typicode.com/posts",
+                            url: "https://enchw20dt3ook.x.pipedream.net/",
                             data: formdata,
                             dataType: 'JSON',
                             processData: false,
@@ -632,9 +606,10 @@ We want to preview images, so we need to register the Image Preview plugin
                         }).done(function(response) {
                             // todo
                             console.log(response)
+                            $(":submit").prop('disabled', false);
+                            $(":submit").removeClass('spin');
                         });
-
-                        //                        submitForm();
+                        //                        view test data  here https://requestbin.com/r/enchw20dt3ook/1unvyeY1f543HwXsvL74KYXLbfj
                         return false;
                     }
 
@@ -701,31 +676,6 @@ We want to preview images, so we need to register the Image Preview plugin
 
 
         });
-
-        //        function submitForm() {
-        //            var formdata = new FormData($("#serviceform")[0]);
-        //
-        //            console.log("formdata")
-        //            //             append FilePond files into the form data
-        //            pondFiles = pond.getFiles();
-        //            //
-        //            for (var i = 0; i < pondFiles.length; i++) {
-        //                // append the blob file
-        //                formdata.append('file[]', pondFiles[i].file);
-        //            }
-        //
-        //            $.ajax({
-        //                url: "https://jsonplaceholder.typicode.com/posts",
-        //                data: formdata,
-        //                dataType: 'JSON',
-        //                processData: false,
-        //                contentType: false,
-        //                method: "post"
-        //            }).done(function(response) {
-        //                // todo
-        //                console.log(response)
-        //            });
-        //        }
 
     </script>
 
