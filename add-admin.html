@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>MarketBuddy | Orders</title>
+    <title>MarketBuddy | Add Admin</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -21,7 +21,7 @@
 
     <!--    The following CSS library files are loaded for use in this example to provide the styling of the table:-->
 
-    <link rel="stylesheet" href="httaps://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
 
@@ -133,7 +133,7 @@
                         Profile</a>
                 </li>
 
-                <li class="my-2">
+                <li class="my-2 active">
                     <a href="admin-management.html">
                         <span class="mr-1">
                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,7 +176,7 @@
                         Transactions</a>
                 </li>
 
-                <li class="my-2 active">
+                <li class="my-2">
                     <a href="orders.html">
                         <span class="mr-1">
                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -206,145 +206,70 @@
 
                 <div class="row">
                     <div class="col-lg-8">
-                        <p class="breadcrumb"><a href="dashboard.html" class="mr-2">Dashboard</a> >> <span class="active ml-2"> <a href="orders.html">Orders</a></span></p>
+                        <p class="breadcrumb"><a href="dashboard.html" class="mr-2">Dashboard</a> >> <span class="mx-2 font-weight-normal"> <a href="admin-management.html">Sub Users</a></span> >> <span class="active ml-2"> <a href="">Create sub-users</a></span></p>
 
 
                         <div class="dashboard-card">
-                            <div class="row align-items-center">
-                                <div class="col-6 col-lg-4">
-                                    <div class="card-title">
-                                        <h5 class="mb-0 font-weight-bold">Orders</h5>
-                                    </div>
-                                </div>
+                            <div class="card-title">
+                                <h5 class="mb-0 font-weight-bold">Create admin</h5>
                             </div>
 
                             <div class="card-body">
+                                <form action="" class="p-lg-5">
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-6">
+                                            <div class="form-element-wrapper">
+                                                <label for="first_name">First Name</label>
+                                                <input type="text" class="form-control form-title" name="first_name" id="first_name" autocomplete="given-name">
+                                            </div>
+                                        </div>
 
-                                <div class="offers">
-
-                                    <div class="history">
-
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="sort_wrapper">
-
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="filter" id="all" value="" checked>
-                                                        <label class="form-check-label" for="all">All</label>
-                                                    </div>
-
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="filter" id="new" value="New">
-                                                        <label class="form-check-label" for="new">New</label>
-                                                    </div>
-
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="filter" id="accepted" value="Accepted">
-                                                        <label class="form-check-label" for="accepted">Accepted</label>
-                                                    </div>
-
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="filter" id="canceled" value="Canceled">
-                                                        <label class="form-check-label" for="canceled">Canceled</label>
-                                                    </div>
-
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="filter" id="deleted" value="Deleted">
-                                                        <label class="form-check-label" for="deleted">Deleted</label>
-                                                    </div>
-
-                                                </div>
-                                                <table id="history" class="table nowrap" style="width:100%">
-                                                    <thead class="d-none">
-                                                        <tr>
-                                                            <th>Title</th>
-                                                            <th>Clicks</th>
-                                                            <th>Orders</th>
-                                                            <th>Total earnings</th>
-                                                            <th>Status</th>
-                                                            <th>More</th>
-                                                        </tr>
-                                                    </thead>
-
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>3x</td>
-                                                            <td class="title font-weight-bold"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Design the best UI design for your mobile app</td>
-                                                            <td class="text-dark">₦34,099</td>
-                                                            <td>Annette Black</td>
-                                                            <td>New</td>
-                                                            <td class="text-center dropleft">
-                                                                <a id="dropdownMenuButton" class="cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span><img src="images/fi_more-horizontal-colored.svg" alt="more" class="img-fluid"></span> </a>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                    <a class="dropdown-item font-12" href="#">Approve</a>
-                                                                    <a class="dropdown-item font-12" href="#">Cancel</a>
-                                                                    <a class="dropdown-item font-12" href="review-order.html">Review</a>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>1x</td>
-                                                            <td class="title font-weight-bold"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Garrett Winters</td>
-
-                                                            <td>₦290,000</td>
-                                                            <td>Esther Howard</td>
-                                                            <td>Accepted</td>
-                                                            <td class="text-center dropleft">
-                                                                <a id="dropdownMenuButton" class="cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span><img src="images/fi_more-horizontal-colored.svg" alt="more" class="img-fluid"></span> </a>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                    <a class="dropdown-item font-12" href="#">Approve</a>
-                                                                    <a class="dropdown-item font-12" href="#">Cancel</a>
-                                                                    <a class="dropdown-item font-12" href="review-order.html">Review</a>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>1x</td>
-                                                            <td class="title font-weight-bold"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Garrett Winters</td>
-                                                            <td>₦290,000</td>
-                                                            <td>Esther Howard</td>
-                                                            <td>Deleted</td>
-                                                            <td class="text-center dropleft">
-                                                                <a id="dropdownMenuButton" class="cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span><img src="images/fi_more-horizontal-colored.svg" alt="more" class="img-fluid"></span> </a>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                    <a class="dropdown-item font-12" href="#">Approve</a>
-                                                                    <a class="dropdown-item font-12" href="#">Cancel</a>
-                                                                    <a class="dropdown-item font-12" href="review-order.html">Review</a>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>1x</td>
-                                                            <td class="title font-weight-bold"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Garrett Winters</td>
-
-                                                            <td>₦290,000</td>
-                                                            <td>Esther Howard</td>
-                                                            <td>Canceled</td>
-                                                            <td class="text-center dropleft">
-                                                                <a id="dropdownMenuButton" class="cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span><img src="images/fi_more-horizontal-colored.svg" alt="more" class="img-fluid"></span> </a>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                    <a class="dropdown-item font-12" href="#">Approve</a>
-                                                                    <a class="dropdown-item font-12" href="#">Cancel</a>
-                                                                    <a class="dropdown-item font-12" href="#">Review</a>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-
-
-                                                    </tbody>
-                                                </table>
-
-                                                <div class="text-center py-5">
-                                                    <img src="images/no-service.svg" alt="no services" class="img-fluid">
-                                                    <p class="mt-3">You have no orders yet</p>
-                                                </div>
+                                        <div class="form-group col-lg-6">
+                                            <div class="form-element-wrapper">
+                                                <label for="last_name">Last Name</label>
+                                                <input type="text" class="form-control form-title" name="last_name" id="last_name" autocomplete="family-name" />
                                             </div>
                                         </div>
                                     </div>
 
-                                </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-12">
+                                            <div class="form-element-wrapper">
+                                                <label for="email">Email</label>
+                                                <input type="text" class="form-control form-title" name="email" id="email" autocomplete="email">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-12">
+                                            <div class="form-element-wrapper">
+                                                <label for="phone_number">Phone Number</label>
+                                                <input type="text" class="form-control form-title" name="phone_number" id="phone_number" autocomplete="mobile">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col-lg-12">
+                                            <div class="form-element-wrapper">
+                                                <label for="password">Password</label>
+                                                <input type="text" class="form-control form-title" name="password" id="password" autocomplete="new-password">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-row">
+                                        <div class="col-lg-3 offset-lg-9">
+                                            <button class="btn btn-primary btn-block font-weight-bold">
+                                                Create user
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </form>
+
                             </div>
                         </div>
 
@@ -420,34 +345,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <script src="js/util.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-
-            var history_table = $('#history').DataTable({
-                responsive: true,
-                "paging": false,
-                "info": false,
-                //                "searching": false
-            });
-
-            $('.filter').click(function() {
-                var value = $(this).data('value')
-
-            });
-
-            $('input[name=filter]').change(function() {
-                var value = $('input[name=filter]:checked').val();
-                history_table.columns(4).search(value).draw();
-            });
-
-        })
-
-    </script>
 
 </body>
 

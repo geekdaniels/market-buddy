@@ -23,6 +23,10 @@ p {
     color: #999;
 }
 
+.font--13 {
+    font-size: 13px;
+}
+
 a,
 a:hover,
 a:focus {
@@ -103,6 +107,11 @@ a:focus {
     border-color: var(--primary-color-variant-2);
 }
 
+.accepted-status {
+    color: #02506E;
+    background: #D7F3FE;
+    border-color: #D7F3FE;
+}
 
 .navbar {
     padding: 15px 10px;
@@ -231,7 +240,6 @@ a:focus {
 
 #sidebar ul li a svg {
     position: relative;
-    top: -3px;
 }
 
 
