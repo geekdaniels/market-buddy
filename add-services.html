@@ -605,9 +605,10 @@ We want to preview images, so we need to register the Image Preview plugin
                             method: "post"
                         }).done(function(response) {
                             // todo
-                            console.log(response)
                             $(":submit").prop('disabled', false);
                             $(":submit").removeClass('spin');
+                            $('#stage3').hide();
+                            $('#success').show();
                         });
                         //                        view test data  here https://requestbin.com/r/enchw20dt3ook/1unvyeY1f543HwXsvL74KYXLbfj
                         return false;
