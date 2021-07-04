@@ -756,6 +756,45 @@ tbody tr {
     position: absolute;
 }
 
+span.refund-status {
+    background: #FFF5F6;
+    border-radius: 4px;
+    color: #F8444F;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+td.refund-status {
+    color: #F8444F;
+    font-weight: 500;
+}
+
+span.sales-status {
+    background: #D7F3FE;
+    border-radius: 4px;
+    color: #02506E;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+td.sales-status {
+    color: #02506E;
+    font-weight: 500;
+}
+
+span.withdrawal-status {
+    background: #EDF6F7;
+    border-radius: 4px;
+    color: #78BDC4;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+td.withdrawal-status {
+    color: #78BDC4;
+    font-weight: 500;
+}
+
 /* spinner animation */
 @keyframes spinner {
     0% {
