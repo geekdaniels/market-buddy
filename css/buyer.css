@@ -217,7 +217,7 @@ a:focus {
 }
 
 #sidebar ul.components {
-    padding: 20px 20px;
+    /*    padding: 20px 20px;*/
     background: #fff;
     margin-right: 2rem;
     margin-left: 2rem;
@@ -231,36 +231,73 @@ a:focus {
     margin-bottom: 0px
 }
 
-#sidebar ul li a {
-    padding: 10px 0px;
+#sidebar ul li {
+    /*    padding: 20px;*/
     font-size: 1em;
     display: block;
     font-weight: 300;
 }
 
-#sidebar ul li a svg {
+#sidebar ul li a {
+    padding: 20px;
+    font-size: 1em;
+    display: block;
+    font-weight: 300;
+}
+
+#sidebar ul li a span {
+    background: #F7F8F3;
+    border-radius: 50%;
+    /* height: 50px; */
+    /* width: 50px; */
+    padding: 15px 20px;
+    text-align: center;
+    vertical-align: center;
     position: relative;
 }
 
+#sidebar ul li a svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 #sidebar ul li a:hover {
-    color: var(--primary-color);
+    color: #000;
     background: #fff;
+    background: #E3F1F3;
 }
 
 #sidebar ul li a:hover path {
+    fill: #fff;
+    stroke: #fff;
+    /*    background: #fff;*/
+}
+
+#sidebar ul li a:hover span {
     fill: var(--primary-color);
-    background: #fff;
+    background: #02506E;
 }
 
 #sidebar ul li.active > a,
 a[aria-expanded="true"] {
-    color: var(--primary-color);
+    color: #000;
+    background: #E3F1F3;
 }
-
 
 #sidebar ul li.active > a path {
     fill: var(--primary-color);
+    stroke: #fff;
+}
+
+
+#sidebar ul li.active > a span {
+    background: #02506E;
+}
+
+#sidebar ul li.active > a path {
+    fill: #fff;
 }
 
 
