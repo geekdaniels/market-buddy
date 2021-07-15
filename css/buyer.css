@@ -270,7 +270,7 @@ a:focus {
 }
 
 #sidebar ul li a:hover path {
-    fill: #fff;
+    fill: #02506E;
     stroke: #fff;
     /*    background: #fff;*/
 }
@@ -291,13 +291,12 @@ a[aria-expanded="true"] {
     stroke: #fff;
 }
 
-
 #sidebar ul li.active > a span {
     background: #02506E;
 }
 
 #sidebar ul li.active > a path {
-    fill: #fff;
+    fill: #02506E;
 }
 
 
