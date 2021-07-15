@@ -161,7 +161,7 @@ a:focus {
 #sidebar {
     width: 350px;
     position: fixed;
-    top: 90px;
+    top: 150px;
     /*    left: -250px;*/
     height: 100vh;
     z-index: 999;
@@ -293,7 +293,7 @@ ul ul a {
     min-height: 100vh;
     transition: all 0.3s;
     position: absolute;
-    top: 95px;
+    top: 150px;
     right: 0;
 }
 

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MarketBuddy | Order Summary</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!--    The following CSS library files are loaded for use in this example to provide the styling of the table:-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ion-rangeslider@2.3.0/css/ion.rangeSlider.min.css">
+
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body style="background: #FBFBF9;">
+
+    <div class="">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed px-lg-5 py-0 mb-0">
+            <a class="navbar-brand nav-image position-relative" href="index.html">
+                <img src="images/logo.svg" alt="Marketbuddy Logo" class="img-fluid" width="80">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" id="sidebarCollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-align-left text-primary"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active mx-lg-3">
+                        <a class="nav-link mt-lg-2" href="#">Auctions</a>
+                    </li>
+                    <li class="nav-item mx-lg-3">
+                        <a class="nav-link  mt-lg-2" href="#">Help</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-nav ml-auo">
+                    <form class="form-inline my-3 my-lg-0">
+                        <input class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-primary my-3 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item mx-lg-3">
+                        <a class="nav-link" href="#">Hello, Ozenua
+                            <img src="https://source.unsplash.com/random/80x80" alt="username" class="img-fluid rounded-circle ml-2" width="40"></a>
+                    </li>
+
+                    <li class="nav-item active mx-lg-3">
+                        <a class="nav-link mt-lg-2" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item mx-lg-3">
+                        <a class="nav-link  mt-lg-2" href="#">My Services</a>
+                    </li>
+
+                    <li class="nav-item mx-lg-3">
+                        <a class="nav-link  mt-lg-2" href="#">Cart</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="search-banner py-lg-3 py-2 mb-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <span class="search-breadcrumb">Cart</span> <span>
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.4082 13.2964L14.1582 9.54639L10.4082 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5.1582 13.2964L8.9082 9.54639L5.1582 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="search-breadcrumb">Checkout</span> <span>
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.4082 13.2964L14.1582 9.54639L10.4082 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5.1582 13.2964L8.9082 9.54639L5.1582 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span> <span class="font-weight-bold text-white">Make payment</span>
+                </div>
+
+                <div class="col-lg-4 text-lg-right">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mx-3">
+                            <a href="#">
+                                <span>
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                            <path d="M15.5 18.3799C16.8807 18.3799 18 17.2606 18 15.8799C18 14.4992 16.8807 13.3799 15.5 13.3799C14.1193 13.3799 13 14.4992 13 15.8799C13 17.2606 14.1193 18.3799 15.5 18.3799Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.5 12.5464C6.88071 12.5464 8 11.4271 8 10.0464C8 8.66567 6.88071 7.54639 5.5 7.54639C4.11929 7.54639 3 8.66567 3 10.0464C3 11.4271 4.11929 12.5464 5.5 12.5464Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7.6582 11.3047L13.3499 14.6214" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M15.5 6.71289C16.8807 6.71289 18 5.5936 18 4.21289C18 2.83218 16.8807 1.71289 15.5 1.71289C14.1193 1.71289 13 2.83218 13 4.21289C13 5.5936 14.1193 6.71289 15.5 6.71289Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M13.3415 5.47119L7.6582 8.78786" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="20" height="20" fill="white" transform="translate(0.5 0.0463867)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+
+
+                        <li class="list-inline-item mx-3">
+                            <a href="#">
+                                <span>
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.8666 3.88811C17.441 3.46228 16.9356 3.12448 16.3794 2.89401C15.8232 2.66354 15.227 2.54492 14.6249 2.54492C14.0229 2.54492 13.4267 2.66354 12.8705 2.89401C12.3143 3.12448 11.8089 3.46228 11.3833 3.88811L10.4999 4.77144L9.6166 3.88811C8.75686 3.02837 7.5908 2.54537 6.37494 2.54537C5.15908 2.54537 3.99301 3.02837 3.13327 3.88811C2.27353 4.74785 1.79053 5.91392 1.79053 7.12978C1.79053 8.34564 2.27353 9.5117 3.13327 10.3714L4.0166 11.2548L10.4999 17.7381L16.9833 11.2548L17.8666 10.3714C18.2924 9.94581 18.6302 9.44046 18.8607 8.88424C19.0912 8.32802 19.2098 7.73185 19.2098 7.12978C19.2098 6.5277 19.0912 5.93153 18.8607 5.37531C18.6302 4.8191 18.2924 4.31374 17.8666 3.88811Z" fill="white" />
+                                    </svg>
+
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row my-5">
+            <div class="col-lg-3">
+                <div class="user-card text-center">
+                    <div class="ad-section px-3 py-5">
+                        <span class="btn font-weight-bold mb-3 my-lg-4 title rounded-0 text-white">New feature</span>
+                        <h3 class="text-white mb-4">Free shipping and additional sales code</h3>
+                        <p class="text-white my-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+
+                        <button class="btn btn-primary font-weight-bold mb-4">Get coupon code</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="dashboard-card px-lg-5 py-3">
+                    <div class="card-title">
+                        <h4 class="mb-0">Address details</h4>
+                    </div>
+
+                    <form action="" class="card-body">
+                        <div class="form-row">
+                            <div class="form-group col-lg-6">
+                                <div class="form-element-wrapper">
+                                    <label for="first_name">First Name</label>
+                                    <input type="text" class="form-control form-title" name="first_name" id="first_name" autofocus>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <div class="form-element-wrapper">
+                                    <label for="last_name">Last Name</label>
+                                    <input type="text" class="form-control form-title" name="last_name" id="last_name">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <div class="form-element-wrapper">
+                                    <label for="description">Description</label>
+                                    <textarea name="description" id="description" rows="4" class="form-control"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <div class="form-element-wrapper">
+                                    <label for="state">State/Region</label>
+                                    <select id="state" class="form-control" name="state">
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <div class="form-element-wrapper">
+                                    <label for="city">City/Town</label>
+                                    <select id="city" name="city" class="form-control">
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="col-lg-12 text-lg-right my-3">
+                                <button class="btn btn-primary font-weight-bold">Save and continue <span>
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.88663 8.07318L7.05996 5.24652C6.99799 5.18403 6.92425 5.13443 6.84301 5.10059C6.76177 5.06674 6.67464 5.04932 6.58663 5.04932C6.49862 5.04932 6.41148 5.06674 6.33024 5.10059C6.249 5.13443 6.17527 5.18403 6.1133 5.24652C5.98913 5.37142 5.91943 5.54039 5.91943 5.71652C5.91943 5.89264 5.98913 6.06161 6.1133 6.18652L8.4733 8.54652L6.1133 10.9065C5.98913 11.0314 5.91943 11.2004 5.91943 11.3765C5.91943 11.5526 5.98913 11.7216 6.1133 11.8465C6.17559 11.9083 6.24947 11.9572 6.33069 11.9904C6.41192 12.0235 6.49889 12.0404 6.58663 12.0398C6.67437 12.0404 6.76134 12.0235 6.84257 11.9904C6.92379 11.9572 6.99767 11.9083 7.05996 11.8465L9.88663 9.01985C9.94911 8.95787 9.99871 8.88414 10.0326 8.8029C10.0664 8.72166 10.0838 8.63452 10.0838 8.54652C10.0838 8.45851 10.0664 8.37137 10.0326 8.29013C9.99871 8.20889 9.94911 8.13516 9.88663 8.07318Z" fill="white" />
+                                        </svg>
+
+                                    </span></button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+
+                <div class="order-summary px-3 py-4 bg-white">
+                    <h4 class="font-weight-bold mb-5">Order summary</h4>
+                    <p class="small-heading mb-1">Order information</p>
+
+                    <p class="title text-dark">Web designer and Backend Engineer</p>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>Package fee</p>
+                        </div>
+                        <div class="col-lg-6 text-right">
+                            <p class="text-dark">34,000</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>Total</p>
+                        </div>
+                        <div class="col-lg-6 text-right">
+                            <p class="text-dark">34,000</p>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-secondary btn-block mb-4 font-weight-bold" href="cart.html">Edit order</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/ion-rangeslider@2.3.0/js/ion.rangeSlider.min.js"></script>
+
+</html>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>MarketBuddy | Security</title>
+    <title>MarketBuddy | Orders</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
 
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/buyer.css">
 
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
@@ -36,7 +36,7 @@
 
 <body>
     <div class="nav-fixed">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed px-lg-5 py-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed px-lg-5 py-0 mb-0">
             <a class="navbar-brand nav-image position-relative" href="index.html">
                 <img src="images/logo.svg" alt="Marketbuddy Logo" class="img-fluid" width="80">
             </a>
@@ -76,6 +76,28 @@
                 </ul>
             </div>
         </nav>
+        <div class="search-banner py-lg-3 py-2 mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <span class="search-breadcrumb">Home</span> <span>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4082 13.2964L14.1582 9.54639L10.4082 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5.1582 13.2964L8.9082 9.54639L5.1582 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span class="search-breadcrumb">Profile</span> <span>
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4082 13.2964L14.1582 9.54639L10.4082 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5.1582 13.2964L8.9082 9.54639L5.1582 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span> <span class="font-weight-bold text-white">Transactions</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="wrapper">
@@ -206,49 +228,143 @@
 
                 <div class="row">
                     <div class="col-lg-8">
-                        <p class="breadcrumb"><a href="dashboard.html" class="mr-2">Dashboard</a> >> <span class="mx-2 font-weight-normal"> <a href="security.html">Security</a></span></p>
-
 
                         <div class="dashboard-card">
-                            <div class="card-title">
-                                <h5 class="mb-0 font-weight-bold">Security</h5>
+                            <div class="row align-items-center">
+                                <div class="col-6 col-lg-4">
+                                    <div class="card-title">
+                                        <h5 class="mb-0 font-weight-bold">Orders</h5>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="card-body">
-                                <p>Set new password</p>
-                                <form action="" class="">
-                                    <div class="form-row">
-                                        <div class="form-group col-lg-6">
-                                            <div class="form-element-wrapper">
-                                                <label for="new-password">Create new password</label>
-                                                <input type="text" class="form-control form-title" name="new-password" id="new-password" autocomplete="new-password">
+
+                                <div class="offers">
+
+                                    <div class="history">
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="sort_wrapper">
+
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="filter" id="all" value="" checked>
+                                                        <label class="form-check-label" for="all">All</label>
+                                                    </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="filter" id="new" value="New">
+                                                        <label class="form-check-label" for="new">New</label>
+                                                    </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="filter" id="accepted" value="Accepted">
+                                                        <label class="form-check-label" for="accepted">Accepted</label>
+                                                    </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="filter" id="canceled" value="Canceled">
+                                                        <label class="form-check-label" for="canceled">Canceled</label>
+                                                    </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="filter" id="deleted" value="Deleted">
+                                                        <label class="form-check-label" for="deleted">Deleted</label>
+                                                    </div>
+
+                                                </div>
+                                                <table id="orders" class="table nowrap" style="width:100%">
+                                                    <thead class="d-none">
+                                                        <tr>
+                                                            <th>Title</th>
+                                                            <th>Clicks</th>
+                                                            <th>Orders</th>
+                                                            <th>Total earnings</th>
+                                                            <th>Status</th>
+                                                            <th>More</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>3x</td>
+                                                            <td class="title font-weight-bold"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Design the best UI design for your mobile app</td>
+                                                            <td class="text-dark">₦34,099</td>
+                                                            <td>Annette Black</td>
+                                                            <td>New</td>
+                                                            <td class="text-center dropleft">
+                                                                <a id="dropdownMenuButton" class="cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span><img src="images/fi_more-horizontal-colored.svg" alt="more" class="img-fluid"></span> </a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item font-12" href="#">Approve</a>
+                                                                    <a class="dropdown-item font-12" href="#">Cancel</a>
+                                                                    <a class="dropdown-item font-12" href="review-order.html">Review</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1x</td>
+                                                            <td class="title font-weight-bold"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Garrett Winters</td>
+
+                                                            <td>₦290,000</td>
+                                                            <td>Esther Howard</td>
+                                                            <td>Accepted</td>
+                                                            <td class="text-center dropleft">
+                                                                <a id="dropdownMenuButton" class="cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span><img src="images/fi_more-horizontal-colored.svg" alt="more" class="img-fluid"></span> </a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item font-12" href="#">Approve</a>
+                                                                    <a class="dropdown-item font-12" href="#">Cancel</a>
+                                                                    <a class="dropdown-item font-12" href="review-order.html">Review</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>1x</td>
+                                                            <td class="title font-weight-bold"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Garrett Winters</td>
+                                                            <td>₦290,000</td>
+                                                            <td>Esther Howard</td>
+                                                            <td>Deleted</td>
+                                                            <td class="text-center dropleft">
+                                                                <a id="dropdownMenuButton" class="cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span><img src="images/fi_more-horizontal-colored.svg" alt="more" class="img-fluid"></span> </a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item font-12" href="#">Approve</a>
+                                                                    <a class="dropdown-item font-12" href="#">Cancel</a>
+                                                                    <a class="dropdown-item font-12" href="review-order.html">Review</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>1x</td>
+                                                            <td class="title font-weight-bold"> <img src="https://source.unsplash.com/random" alt="" class="img-fluid mr-2"> Garrett Winters</td>
+
+                                                            <td>₦290,000</td>
+                                                            <td>Esther Howard</td>
+                                                            <td>Canceled</td>
+                                                            <td class="text-center dropleft">
+                                                                <a id="dropdownMenuButton" class="cursor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span><img src="images/fi_more-horizontal-colored.svg" alt="more" class="img-fluid"></span> </a>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item font-12" href="#">Approve</a>
+                                                                    <a class="dropdown-item font-12" href="#">Cancel</a>
+                                                                    <a class="dropdown-item font-12" href="#">Review</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </tbody>
+                                                </table>
+
+                                                <div class="text-center py-5">
+                                                    <img src="images/no-service.svg" alt="no services" class="img-fluid">
+                                                    <p class="mt-3">You have no orders yet</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="form-row">
-                                        <div class="form-group col-lg-6">
-                                            <div class="form-element-wrapper">
-                                                <label for="confirm-password">Confirm new password</label>
-                                                <input type="text" class="form-control form-title" name="confirm-password" id="confirm-password" autocomplete="confirm-password">
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="form-row">
-                                        <div class="col-lg-3">
-                                            <button class="btn btn-primary btn-block font-weight-bold">
-                                                Save <span><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.88712 8.00336L7.06045 5.17669C6.99848 5.11421 6.92474 5.06461 6.8435 5.03076C6.76226 4.99692 6.67512 4.97949 6.58712 4.97949C6.49911 4.97949 6.41197 4.99692 6.33073 5.03076C6.24949 5.06461 6.17576 5.11421 6.11378 5.17669C5.98962 5.3016 5.91992 5.47057 5.91992 5.64669C5.91992 5.82281 5.98962 5.99178 6.11378 6.11669L8.47378 8.47669L6.11378 10.8367C5.98962 10.9616 5.91992 11.1306 5.91992 11.3067C5.91992 11.4828 5.98962 11.6518 6.11378 11.7767C6.17608 11.8385 6.24995 11.8874 6.33118 11.9205C6.4124 11.9537 6.49938 11.9705 6.58712 11.97C6.67485 11.9705 6.76183 11.9537 6.84305 11.9205C6.92428 11.8874 6.99816 11.8385 7.06045 11.7767L9.88712 8.95002C9.9496 8.88805 9.9992 8.81432 10.033 8.73308C10.0669 8.65184 10.0843 8.5647 10.0843 8.47669C10.0843 8.38868 10.0669 8.30155 10.033 8.22031C9.9992 8.13907 9.9496 8.06533 9.88712 8.00336Z" fill="white" />
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </form>
-
+                                </div>
                             </div>
                         </div>
 
@@ -324,8 +440,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <script src="js/util.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap4.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
 
+            var history_table = $('#orders').DataTable({
+                responsive: true,
+                "paging": false,
+                "info": false,
+                //                "searching": false
+            });
+
+            $('.filter').click(function() {
+                var value = $(this).data('value')
+            });
+
+            $('input[name=filter]').change(function() {
+                var value = $('input[name=filter]:checked').val();
+                history_table.columns(4).search(value).draw();
+            });
+
+        })
+
+    </script>
 </body>
 
 </html>

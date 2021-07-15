@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MarketBuddy | Search Results</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!--    The following CSS library files are loaded for use in this example to provide the styling of the table:-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ion-rangeslider@2.3.0/css/ion.rangeSlider.min.css">
+
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body style="background: #FBFBF9;">
+
+    <div class="">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed px-lg-5 py-0 mb-0">
+            <a class="navbar-brand nav-image position-relative" href="index.html">
+                <img src="images/logo.svg" alt="Marketbuddy Logo" class="img-fluid" width="80">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" id="sidebarCollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-align-left text-primary"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active mx-lg-3">
+                        <a class="nav-link mt-lg-2" href="#">Auctions</a>
+                    </li>
+                    <li class="nav-item mx-lg-3">
+                        <a class="nav-link  mt-lg-2" href="#">Help</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-nav ml-auo">
+                    <form class="form-inline my-3 my-lg-0">
+                        <input class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-primary my-3 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item mx-lg-3">
+                        <a class="nav-link" href="#">Hello, Ozenua
+                            <img src="https://source.unsplash.com/random/80x80" alt="username" class="img-fluid rounded-circle ml-2" width="40"></a>
+                    </li>
+
+                    <li class="nav-item active mx-lg-3">
+                        <a class="nav-link mt-lg-2" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item mx-lg-3">
+                        <a class="nav-link  mt-lg-2" href="#">My Services</a>
+                    </li>
+
+                    <li class="nav-item mx-lg-3">
+                        <a class="nav-link  mt-lg-2" href="#">Cart</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="search-banner py-lg-3 py-2 mb-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <span class="search-breadcrumb">Category</span> <span>
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.4082 13.2964L14.1582 9.54639L10.4082 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5.1582 13.2964L8.9082 9.54639L5.1582 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="search-breadcrumb">Sub category</span> <span>
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.4082 13.2964L14.1582 9.54639L10.4082 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5.1582 13.2964L8.9082 9.54639L5.1582 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span> <span class="font-weight-bold text-white">Web designer and Backend Engineer</span>
+                </div>
+
+                <div class="col-lg-4 text-lg-right">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mx-3">
+                            <a href="#">
+                                <span>
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                            <path d="M15.5 18.3799C16.8807 18.3799 18 17.2606 18 15.8799C18 14.4992 16.8807 13.3799 15.5 13.3799C14.1193 13.3799 13 14.4992 13 15.8799C13 17.2606 14.1193 18.3799 15.5 18.3799Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.5 12.5464C6.88071 12.5464 8 11.4271 8 10.0464C8 8.66567 6.88071 7.54639 5.5 7.54639C4.11929 7.54639 3 8.66567 3 10.0464C3 11.4271 4.11929 12.5464 5.5 12.5464Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7.6582 11.3047L13.3499 14.6214" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M15.5 6.71289C16.8807 6.71289 18 5.5936 18 4.21289C18 2.83218 16.8807 1.71289 15.5 1.71289C14.1193 1.71289 13 2.83218 13 4.21289C13 5.5936 14.1193 6.71289 15.5 6.71289Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M13.3415 5.47119L7.6582 8.78786" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="20" height="20" fill="white" transform="translate(0.5 0.0463867)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+
+
+                        <li class="list-inline-item mx-3">
+                            <a href="#">
+                                <span>
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.8666 3.88811C17.441 3.46228 16.9356 3.12448 16.3794 2.89401C15.8232 2.66354 15.227 2.54492 14.6249 2.54492C14.0229 2.54492 13.4267 2.66354 12.8705 2.89401C12.3143 3.12448 11.8089 3.46228 11.3833 3.88811L10.4999 4.77144L9.6166 3.88811C8.75686 3.02837 7.5908 2.54537 6.37494 2.54537C5.15908 2.54537 3.99301 3.02837 3.13327 3.88811C2.27353 4.74785 1.79053 5.91392 1.79053 7.12978C1.79053 8.34564 2.27353 9.5117 3.13327 10.3714L4.0166 11.2548L10.4999 17.7381L16.9833 11.2548L17.8666 10.3714C18.2924 9.94581 18.6302 9.44046 18.8607 8.88424C19.0912 8.32802 19.2098 7.73185 19.2098 7.12978C19.2098 6.5277 19.0912 5.93153 18.8607 5.37531C18.6302 4.8191 18.2924 4.31374 17.8666 3.88811Z" fill="white" />
+                                    </svg>
+
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row my-5">
+            <div class="col-lg-3">
+                <div class="user-card text-center">
+                    <div class="user-card_bio">
+                        <img src="https://source.unsplash.com/random/80x80" alt="username" class="user-card__image mt-5 rounded-circle">
+
+                        <p class="user-card_name mt-3">John Does</p>
+
+
+                        <div class="user-card_rating my-3">
+                            <div class="rate">
+                                <input type="radio" id="star5" name="rate" value="5" />
+                                <label for="star5" title="text">5 stars</label>
+                                <input type="radio" id="star4" name="rate" value="4" checked />
+                                <label for="star4" title="text">4 stars</label>
+                                <input type="radio" id="star3" name="rate" value="3" />
+                                <label for="star3" title="text">3 stars</label>
+                                <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2" title="text">2 stars</label>
+                                <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1" title="text">1 star</label>
+                            </div>
+                            <span class="text">
+                                (<span>4.5</span> star rating)
+                            </span>
+                        </div>
+
+
+                        <div class="user-card_location my-3 text-center">
+                            <p><img src="images/location.svg" alt=""> Logos Island</p>
+                        </div>
+
+                        <button class="btn btn-secondary my-3">Contact me</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="product-desc bg-white p-3 h-100">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h2 class="font-weight-bold">Web designer and Backend Engineer</h2>
+                        </div>
+
+                        <div class="col-lg-4 text-lg-right">
+                            <p>
+                                <a href="#" class="btn btn-primary font-weight-bold">Request Service</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8">
+
+                            <p class="description">
+                                Description
+                            </p>
+
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+                            <p class="text-dark">Package fee</p>
+                            <h4 class="font-weight-bold">#32,000</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="search-page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+
+                </div>
+
+                <div class="col-lg-8">
+                    <h5 class="my-3 font-weight-bold">Other services like this</h5>
+
+                    <div class="row">
+                        <div class="col-lg-3 my-3">
+                            <a href="service-detail.html">
+                                <div class="image-card">
+                                    <img src="images/photo-67.jpeg" class="img-fluid" alt="" height="137" width="234">
+
+                                    <p class="title mb-0 mt-2">Wordpress Web design</p>
+
+                                    <p class="cost mb-1">N640,000</p>
+                                    <div class="author-block">
+                                        <img src="images/photo-67.jpeg" class="mr-2 img-fluid rounded-circle" alt="" style="width: 50px;height: 50px;">
+                                        <p class="author mb-0">by Samuel Jackson</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 my-3">
+                            <a href="service-detail.html">
+                                <div class="image-card">
+                                    <img src="images/photo-67.jpeg" class="img-fluid" alt="" height="137" width="234">
+
+                                    <p class="title mb-0 mt-2">Wordpress Web design</p>
+
+                                    <p class="cost mb-1">N640,000</p>
+                                    <div class="author-block">
+                                        <img src="images/photo-67.jpeg" class="mr-2 img-fluid rounded-circle" alt="" style="width: 50px;height: 50px;">
+                                        <p class="author mb-0">by Samuel Jackson</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 my-3">
+                            <a href="service-detail.html">
+                                <div class="image-card">
+                                    <img src="images/photo-67.jpeg" class="img-fluid" alt="" height="137" width="234">
+
+                                    <p class="title mb-0 mt-2">Wordpress Web design</p>
+
+                                    <p class="cost mb-1">N640,000</p>
+                                    <div class="author-block">
+                                        <img src="images/photo-67.jpeg" class="mr-2 img-fluid rounded-circle" alt="" style="width: 50px;height: 50px;">
+                                        <p class="author mb-0">by Samuel Jackson</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 my-3">
+                            <a href="service-detail.html">
+                                <div class="image-card">
+                                    <img src="images/photo-67.jpeg" class="img-fluid" alt="" height="137" width="234">
+
+                                    <p class="title mb-0 mt-2">Wordpress Web design</p>
+
+                                    <p class="cost mb-1">N640,000</p>
+                                    <div class="author-block">
+                                        <img src="images/photo-67.jpeg" class="mr-2 img-fluid rounded-circle" alt="" style="width: 50px;height: 50px;">
+                                        <p class="author mb-0">by Samuel Jackson</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <h5 class="my-3 font-weight-bold">Recently viewed</h5>
+
+                    <div class="row">
+                        <div class="col-lg-3 my-3">
+                            <a href="service-detail.html">
+                                <div class="image-card">
+                                    <img src="images/photo-67.jpeg" class="img-fluid" alt="" height="137" width="234">
+
+                                    <p class="title mb-0 mt-2">Wordpress Web design</p>
+
+                                    <p class="cost mb-1">N640,000</p>
+                                    <div class="author-block">
+                                        <img src="images/photo-67.jpeg" class="mr-2 img-fluid rounded-circle" alt="" style="width: 50px;height: 50px;">
+                                        <p class="author mb-0">by Samuel Jackson</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 my-3">
+                            <a href="service-detail.html">
+                                <div class="image-card">
+                                    <img src="images/photo-67.jpeg" class="img-fluid" alt="" height="137" width="234">
+
+                                    <p class="title mb-0 mt-2">Wordpress Web design</p>
+
+                                    <p class="cost mb-1">N640,000</p>
+                                    <div class="author-block">
+                                        <img src="images/photo-67.jpeg" class="mr-2 img-fluid rounded-circle" alt="" style="width: 50px;height: 50px;">
+                                        <p class="author mb-0">by Samuel Jackson</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 my-3">
+                            <a href="service-detail.html">
+                                <div class="image-card">
+                                    <img src="images/photo-67.jpeg" class="img-fluid" alt="" height="137" width="234">
+
+                                    <p class="title mb-0 mt-2">Wordpress Web design</p>
+
+                                    <p class="cost mb-1">N640,000</p>
+                                    <div class="author-block">
+                                        <img src="images/photo-67.jpeg" class="mr-2 img-fluid rounded-circle" alt="" style="width: 50px;height: 50px;">
+                                        <p class="author mb-0">by Samuel Jackson</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 my-3">
+                            <a href="service-detail.html">
+                                <div class="image-card">
+                                    <img src="images/photo-67.jpeg" class="img-fluid" alt="" height="137" width="234">
+
+                                    <p class="title mb-0 mt-2">Wordpress Web design</p>
+
+                                    <p class="cost mb-1">N640,000</p>
+                                    <div class="author-block">
+                                        <img src="images/photo-67.jpeg" class="mr-2 img-fluid rounded-circle" alt="" style="width: 50px;height: 50px;">
+                                        <p class="author mb-0">by Samuel Jackson</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer mt-4">
+            <div class="container">
+                <div class="row pt-5">
+
+                    <!-- /.about-widget -->
+                    <div class="col-lg-3 offset-lg-1 col-sm-6 col-12 footer-list aos-init aos-animate" data-aos="fade-up">
+                        <h5 class="footer__title">Categories</h5>
+                        <ul class="list-unstyled">
+                            <li class="my-3"><a href="#">Goods</a></li>
+                            <li class="my-3"><a href="#">Services</a></li>
+                            <li class="my-3"><a href="#">Auctions</a></li>
+                            <li class="my-3"><a href="#">Vendors</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- /.about-widget -->
+                    <div class="col-lg-3 offset-lg-1 col-sm-6 col-12 footer-list aos-init aos-animate" data-aos="fade-up">
+                        <h5 class="footer__title">Support</h5>
+                        <ul class="list-unstyled">
+                            <li class="my-3"><a href="#">Terms & Conditions</a></li>
+                            <li class="my-3"><a href="#">FAQs</a></li>
+                            <li class="my-3"><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6 col-12 footer-list aos-init aos-animate" data-aos="fade-up">
+                        <h5 class="footer__title">Community</h5>
+                        <ul class="list-unstyled">
+                            <li class="my-3">10th Floor, Reinsurance Building, 46 Marina, Lagos.</li>
+                            <li class="my-3"><a href="mailto: info@ciiang.com" class="email mt-0">info@ciiang.com</a></li>
+                            <li class="my-3"><a href="tel:+2347064486264" class="phone">+234 706 448 6264</a></li>
+                            <li class="my-3"><a href="tel:+2349081706188" class="phone">+234 908 170 6188</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.footer-list -->
+                </div>
+            </div>
+
+            <div class="container">
+                <hr class="bg-white">
+                <div class="row">
+                    <div class="col-lg-7 col-sm-6 col-12 about-widget footer-information">
+                        <p class="footer__description">Copyright (c) Market Buddy 2020</p>
+                    </div>
+
+                    <div class="col-lg-5 text-right">
+                        <ul class="list-inline">
+                            <li class="list-inline-item mr-4"><a href="https://www.facebook.com/#" target="_blank"><img src="/images/facebook.png" alt="follow on facebook" class="img-fluid" width="40"></a></li>
+
+                            <li class="list-inline-item mr-4"><a href="https://www.instagram.com/#" target="_blank"><img src="/images/instagram.png" alt="follow on Instagram" class="img-fluid" width="40"></a></li>
+
+                            <li class="list-inline-item mr-4"><a href="https://www.twitter.com/#" target="_blank"><img src="/images/twitter.png" alt="follow on twitter" class="img-fluid" width="40"></a></li>
+
+                            <li class="list-inline-item mr-4"><a href="https://www.linkedin.com/in/#/" target="_blank"><img src="/images/linkedin.png" alt="follow on linkedin" class="img-fluid" width="40"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/ion-rangeslider@2.3.0/js/ion.rangeSlider.min.js"></script>
+
+</html>

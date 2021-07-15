@@ -66,3 +66,30 @@ $('#business_license').change(function (e) {
     var fileName = e.target.files[0].name;
     $('#business_license_name').val(fileName);
 });
+
+
+$(".button").on("click", function () {
+
+    var $button = $(this);
+    var oldValue = $button.parent().find("input").val();
+
+    if ($button.text() == "+") {
+        var newVal = parseFloat(oldValue) + 1;
+
+        //        calcEarnings(newVal);
+
+    } else {
+        // Don't allow decrementing below zero
+        if (oldValue > 0) {
+            var newVal = parseFloat(oldValue) - 1;
+
+            //            calcEarnings(newVal);
+
+        } else {
+            newVal = 0;
+        }
+    }
+
+    $button.parent().find("input").val(newVal);
+
+});

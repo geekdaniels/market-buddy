@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MarketBuddy | Request Services</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!--    The following CSS library files are loaded for use in this example to provide the styling of the table:-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ion-rangeslider@2.3.0/css/ion.rangeSlider.min.css">
+
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body style="background: #FBFBF9;">
+    <div class="">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed px-lg-5 py-0 mb-0">
+            <a class="navbar-brand nav-image position-relative" href="index.html">
+                <img src="images/logo.svg" alt="Marketbuddy Logo" class="img-fluid" width="80">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" id="sidebarCollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-align-left text-primary"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active mx-lg-3">
+                        <a class="nav-link mt-lg-2" href="#">Auctions</a>
+                    </li>
+                    <li class="nav-item mx-lg-3">
+                        <a class="nav-link  mt-lg-2" href="#">Help</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-nav ml-auo">
+                    <form class="form-inline my-3 my-lg-0">
+                        <input class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-primary my-3 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+
+
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item mx-lg-3">
+                        <a class="nav-link" href="#">Hello, Ozenua
+                            <img src="https://source.unsplash.com/random/80x80" alt="username" class="img-fluid rounded-circle ml-2" width="40"></a>
+                    </li>
+
+                    <li class="nav-item active mx-lg-3">
+                        <a class="nav-link mt-lg-2" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item mx-lg-3">
+                        <a class="nav-link  mt-lg-2" href="#">My Services</a>
+                    </li>
+
+                    <li class="nav-item mx-lg-3">
+                        <a class="nav-link  mt-lg-2" href="#">Cart</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="search-banner py-lg-3 py-2 mb-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <span class="search-breadcrumb">Category</span> <span>
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.4082 13.2964L14.1582 9.54639L10.4082 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5.1582 13.2964L8.9082 9.54639L5.1582 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="search-breadcrumb">Sub category</span> <span>
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.4082 13.2964L14.1582 9.54639L10.4082 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5.1582 13.2964L8.9082 9.54639L5.1582 5.79639" stroke="#73D6FD" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span> <span class="font-weight-bold text-white">Web designer and Backend Engineer</span>
+                </div>
+
+                <div class="col-lg-4 text-lg-right">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mx-3">
+                            <a href="#">
+                                <span>
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                            <path d="M15.5 18.3799C16.8807 18.3799 18 17.2606 18 15.8799C18 14.4992 16.8807 13.3799 15.5 13.3799C14.1193 13.3799 13 14.4992 13 15.8799C13 17.2606 14.1193 18.3799 15.5 18.3799Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M5.5 12.5464C6.88071 12.5464 8 11.4271 8 10.0464C8 8.66567 6.88071 7.54639 5.5 7.54639C4.11929 7.54639 3 8.66567 3 10.0464C3 11.4271 4.11929 12.5464 5.5 12.5464Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7.6582 11.3047L13.3499 14.6214" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M15.5 6.71289C16.8807 6.71289 18 5.5936 18 4.21289C18 2.83218 16.8807 1.71289 15.5 1.71289C14.1193 1.71289 13 2.83218 13 4.21289C13 5.5936 14.1193 6.71289 15.5 6.71289Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M13.3415 5.47119L7.6582 8.78786" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="20" height="20" fill="white" transform="translate(0.5 0.0463867)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+
+
+                        <li class="list-inline-item mx-3">
+                            <a href="#">
+                                <span>
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.8666 3.88811C17.441 3.46228 16.9356 3.12448 16.3794 2.89401C15.8232 2.66354 15.227 2.54492 14.6249 2.54492C14.0229 2.54492 13.4267 2.66354 12.8705 2.89401C12.3143 3.12448 11.8089 3.46228 11.3833 3.88811L10.4999 4.77144L9.6166 3.88811C8.75686 3.02837 7.5908 2.54537 6.37494 2.54537C5.15908 2.54537 3.99301 3.02837 3.13327 3.88811C2.27353 4.74785 1.79053 5.91392 1.79053 7.12978C1.79053 8.34564 2.27353 9.5117 3.13327 10.3714L4.0166 11.2548L10.4999 17.7381L16.9833 11.2548L17.8666 10.3714C18.2924 9.94581 18.6302 9.44046 18.8607 8.88424C19.0912 8.32802 19.2098 7.73185 19.2098 7.12978C19.2098 6.5277 19.0912 5.93153 18.8607 5.37531C18.6302 4.8191 18.2924 4.31374 17.8666 3.88811Z" fill="white" />
+                                    </svg>
+
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row my-5">
+            <div class="col-lg-3">
+                <div class="user-card text-center">
+                    <div class="user-card_bio">
+                        <img src="https://source.unsplash.com/random/80x80" alt="username" class="user-card__image mt-5 rounded-circle">
+
+                        <p class="user-card_name mt-3">John Does</p>
+
+
+                        <div class="user-card_rating my-3">
+                            <div class="rate">
+                                <input type="radio" id="star5" name="rate" value="5" />
+                                <label for="star5" title="text">5 stars</label>
+                                <input type="radio" id="star4" name="rate" value="4" checked />
+                                <label for="star4" title="text">4 stars</label>
+                                <input type="radio" id="star3" name="rate" value="3" />
+                                <label for="star3" title="text">3 stars</label>
+                                <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2" title="text">2 stars</label>
+                                <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1" title="text">1 star</label>
+                            </div>
+                            <span class="text">
+                                (<span>4.5</span> star rating)
+                            </span>
+                        </div>
+
+
+                        <div class="user-card_location my-3 text-center">
+                            <p><img src="images/location.svg" alt=""> Logos Island</p>
+                        </div>
+
+                        <button class="btn btn-secondary my-3">Contact me</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="dashboard-card bg-white p-4">
+                    <h4 class="font-weight-bold mb-4">FIll in requirements</h4>
+                    <p class="small-heading mb-2">Order information</p>
+
+                    <p class="title text-dark">Web designer and Backend Engineer</p>
+
+                    <form action="" class="card-body">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <div class="form-element-wrapper">
+                                    <label for="address">Enter address</label>
+                                    <input required type="text" class="form-control" id="address" name="address">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service_date">Select 3 service dates</label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <div class="form-element-wrapper">
+                                    <input required type="date" class="form-control" id="date" name="date">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <div class="form-element-wrapper">
+                                    <input required type="date" class="form-control" id="date" name="date">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <div class="form-element-wrapper">
+                                    <input required type="date" class="form-control" id="date" name="date">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-12 text-lg-right">
+                                <button class="btn btn-primary font-weight-bold">Continue</button>
+                            </div>
+                        </div>
+
+
+                        <div id="success" class="text-center py-5">
+                            <h4 class="font-weight-bold my-4">You succefully posted a new service</h4>
+                            <img src="images/success.svg" alt="success" class="img-fluid mb-4">
+                            <p class="mt-4 text-dark mb-1">You have successfully posted a service.</p>
+                            <p class="text-dark">You can now share with people</p>
+
+                            <div class="copy">
+                                <div class="form-row justify-content-center">
+                                    <div class="form-group col-lg-4">
+                                        <input id="linkInput" type="text" class="form-control" value="https://www.marketbuddy.com" aria-label="copy Link">
+                                    </div>
+                                </div>
+                                <p class="text-red" id="copy">copy share link
+                                    <span><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                                <path d="M13.3333 6.5H7.33333C6.59695 6.5 6 7.09695 6 7.83333V13.8333C6 14.5697 6.59695 15.1667 7.33333 15.1667H13.3333C14.0697 15.1667 14.6667 14.5697 14.6667 13.8333V7.83333C14.6667 7.09695 14.0697 6.5 13.3333 6.5Z" fill="white" stroke="#F8444F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M3.33301 10.5H2.66634C2.31272 10.5 1.97358 10.3595 1.72353 10.1095C1.47348 9.85943 1.33301 9.52029 1.33301 9.16667V3.16667C1.33301 2.81305 1.47348 2.47391 1.72353 2.22386C1.97358 1.97381 2.31272 1.83334 2.66634 1.83334H8.66634C9.01996 1.83334 9.3591 1.97381 9.60915 2.22386C9.8592 2.47391 9.99967 2.81305 9.99967 3.16667V3.83334" stroke="#F8444F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0">
+                                                    <rect width="16" height="16" fill="white" transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                </p>
+
+                                <p id="myTooltip" class="small"></p>
+                            </div>
+
+                            <a class="btn btn-primary--outline font-weight-bold my-3" href="add-services.html">Add new service</a>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="order-summary px-3 py-4 bg-white">
+                    <h4 class="font-weight-bold mb-5">Order summary</h4>
+                    <p class="small-heading mb-1">Order information</p>
+
+                    <p class="title text-dark">Web designer and Backend Engineer</p>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>Package fee</p>
+                        </div>
+                        <div class="col-lg-6 text-right">
+                            <p class="text-dark">34,000</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>Total</p>
+                        </div>
+                        <div class="col-lg-6 text-right">
+                            <p class="text-dark">34,000</p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-secondary btn-block mb-4 font-weight-bold">Proceed to checkout</button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/ion-rangeslider@2.3.0/js/ion.rangeSlider.min.js"></script>
+
+</html>
